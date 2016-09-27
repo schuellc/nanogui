@@ -254,7 +254,7 @@ public:
     }
 
     std::string numberFormat() const { return mNumberFormat; }
-    void numberFormat(const std::string &format) { mNumberFormat = format; }
+    void setNumberFormat(const std::string &format) { mNumberFormat = format; }
 
     Scalar value() const {
         return (Scalar) std::stod(TextBox::value());

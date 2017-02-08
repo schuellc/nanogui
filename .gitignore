@@ -14,12 +14,16 @@ build.ninja
 rules.ninja
 Makefile
 bin2c
-example1
-example2
+example[1-9]
 icons
 *~
-nanogui.so
-nanogui.pyd
+nanogui*.so
+nanogui*.pyd
 libnanogui.so
 libnanogui.dylib
 .vscode/
+# html documentation specific
+*.pyc
+docs/_build
+docs/doxyoutput
+docs/generated_api

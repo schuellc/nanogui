@@ -48,7 +48,7 @@ bool Slider::mouseButtonEvent(const Vector2i &p, int button, bool down, int /* m
         return false;
 
     if(button == GLFW_MOUSE_BUTTON_1 && down && !mFocused)
-      requestFocus();
+        requestFocus();
 
     const float kr = (int) (mSize.y() * 0.4f), kshadow = 3;
     const float startX = kr + kshadow + mPos.x() - 1;
@@ -57,7 +57,7 @@ bool Slider::mouseButtonEvent(const Vector2i &p, int button, bool down, int /* m
     float value = (p.x() - startX) / widthX;
     value = value * (mRange.second - mRange.first) + mRange.first;
     mValue = std::min(std::max(value, mRange.first), mRange.second);
-	// mValue = std::min(std::max((p.x() - mPos.x()) / (float) mSize.x(), (float) 0.0f), (float) 1.0f);
+    // mValue = std::min(std::max((p.x() - mPos.x()) / (float) mSize.x(), (float) 0.0f), (float) 1.0f);
 
     if (mCallback)
         mCallback(mValue);

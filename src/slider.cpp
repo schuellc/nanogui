@@ -47,7 +47,7 @@ bool Slider::mouseButtonEvent(const Vector2i &p, int button, bool down, int /* m
     if (!mEnabled)
         return false;
 
-    if(button == GLFW_MOUSE_BUTTON_1 && down && !mFocused)
+    if (button == GLFW_MOUSE_BUTTON_1 && down && !mFocused)
         requestFocus();
 
     const float kr = (int) (mSize.y() * 0.4f), kshadow = 3;
